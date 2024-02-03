@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Bienvenue sur le README de ft_printf, une réalisation personnelle développée dans le cadre de ma formation à l'école 42. L'objectif de ce projet est de recréer la fonctionnalité de la fonction `printf()` en langage C. Cette implémentation a été conçue dans le cadre d'un projet pédagogique pour approfondir mes compétences en programmation, en particulier dans la manipulation des fonctions à nombre variable d'arguments.
+Bienvenue sur le projet ft_printf, une réalisation personnelle développée dans le cadre de ma formation à l'école 42. L'objectif de ce projet est de recréer la fonctionnalité de la fonction `printf()` en langage C. Cette implémentation a été conçue dans le cadre d'un projet pédagogique pour approfondir mes compétences en programmation, en particulier dans la manipulation des fonctions à nombre variable d'arguments.
 
 ## Fonctionnalités
 
