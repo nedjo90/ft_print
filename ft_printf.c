@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:10:52 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/03 14:33:48 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/03 16:00:43 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int ft_printf(const char* str)
 	int i = 0;
 	while (str[i])
 	{
-		write(1, &str, 1);
+		write(1, &str[i], 1);
 		i++;
 	}
 	return (i);

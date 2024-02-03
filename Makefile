@@ -8,7 +8,7 @@ RM=rm -rf
 NAME=libftprintf.a
 
 run: re
-	$(CC) main.c -I .
+	$(CC) -w main.c -I . -L . -lftprintf 
 
 all: $(NAME)
 
@@ -16,7 +16,7 @@ $(NAME): $(OBJS)
 	make -C ./libft
 	mv ./libft/libft.a .
 	mv libft.a $(NAME)
-	$(AR) $(NAME) $@ $^
+	$(AR) $@ $^
 
 clean:
 	make clean -C ./libft
