@@ -1,14 +1,19 @@
-SRCS=ft_printf.c
+.SILENT:
+SRCS=\
+srcs/ft_printf.c\
 
 CC=gcc
 CFLAGS=-w
 OBJS=$(SRCS:.c=.o)
+CPPFLAGS= -I includes/
 AR= ar rcs
 RM=rm -rf
 NAME=libftprintf.a
 
 run: re
-	$(CC) -w main.c -I . -L . -lftprintf 
+	./testeur.sh
+	make fclean
+
 
 all: $(NAME)
 
@@ -20,7 +25,7 @@ $(NAME): $(OBJS)
 
 clean:
 	make clean -C ./libft
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) a.out
 
 fclean: clean
 	$(RM) $(NAME)
