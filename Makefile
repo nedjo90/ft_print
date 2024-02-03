@@ -7,6 +7,9 @@ AR= ar rcs
 RM=rm -rf
 NAME=libftprintf.a
 
+run: re
+	$(CC) main.c -I .
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -19,6 +22,7 @@ clean:
 	make clean -C ./libft
 	$(RM) $(OBJS)
 
-fclean:
+fclean: clean
 	$(RM) $(NAME)
 
+re: fclean all
