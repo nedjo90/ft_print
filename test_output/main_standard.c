@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:13:45 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/03 17:30:29 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/04 17:43:20 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int main(int argc, char** argv)
 {
-	int value = printf("test");
-//	ft_putnbr_fd(value, 1);	
+	int value = printf("test %% %c %s", 'i', "coucou");
+	printf("\nsize => %i", value); 	
 }

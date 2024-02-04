@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:29:57 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/03 17:40:42 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/04 15:24:03 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <unistd.h>
 # include <stdio.h>
+# include <stdarg.h>
 # include "../libft/libft.h"
 
-int ft_printf(const char* str);
+int ft_printf(const char* fmt, ...);
 
 #endif

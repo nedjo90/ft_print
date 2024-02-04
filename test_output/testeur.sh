@@ -16,9 +16,9 @@ if [ ! -f "$destination_file" ]; then
     # Créer une copie du fichier source
     cp "$source_file" "$destination_file"
 else
-    cp "$source_file" "$destination_file"
-    # Remplacer "printf" par "ft_printf" dans la copie
-	sed -i '' -E 's/([^_]|^)printf/\1ft_printf/g' "$destination_file"
+    	cp "$source_file" "$destination_file"
+    	# Remplacer "printf" par "ft_printf" dans la copie
+	sed -i '' -E 's/([^_])printf/\1ft_printf/g' "$destination_file"
 fi
 
 gcc -w $source_file -I ./includes -L . -lftprintf -o standard.out
@@ -31,7 +31,7 @@ diff_result=$(delta ./test_output/standard.txt ./test_output/build.txt)
 # Vérifie si le résultat de la commande diff est vide
 if [ -z "$diff_result" ]; then
     echo "Aucune différence!"
-    rm -rf $destination_file  ./test_output/build.txt ./test_output/standard.txt
+#    rm -rf $destination_file  ./test_output/build.txt ./test_output/standard.txt
 else
     # Affiche les différences seulement s'il y en a
     echo "$diff_result"
