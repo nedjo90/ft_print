@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Nom du fichier source
-source_file="main_standard.c"
+source_file="./test_output/main_standard.c"
 # Nom du fichier de destination
-destination_file="main_build.c"
+destination_file="./test_output/main_build.c"
 
 # Vérifier si le fichier source existe
 if [ ! -f "$source_file" ]; then
@@ -21,17 +21,17 @@ else
 	sed -i '' -E 's/([^_]|^)printf/\1ft_printf/g' "$destination_file"
 fi
 
-gcc -w main_standard.c -I ./includes -L . -lftprintf -o standard.out
-gcc -w main_build.c -I ./includes -L . -lftprintf -o build.out
-./standard.out > standard.txt
-./build.out > build.txt
+gcc -w $source_file -I ./includes -L . -lftprintf -o standard.out
+gcc -w $destination_file -I ./includes -L . -lftprintf -o build.out
+./standard.out > ./test_output/standard.txt
+./build.out > ./test_output/build.txt
 
-diff_result=$(delta standard.txt build.txt)
+diff_result=$(delta ./test_output/standard.txt ./test_output/build.txt)
 
 # Vérifie si le résultat de la commande diff est vide
 if [ -z "$diff_result" ]; then
     echo "Aucune différence!"
-    rm -rf build.txt main_build.c standard.txt
+    rm -rf $destination_file  ./test_output/build.txt ./test_output/standard.txt
 else
     # Affiche les différences seulement s'il y en a
     echo "$diff_result"

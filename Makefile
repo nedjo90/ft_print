@@ -11,7 +11,7 @@ RM=rm -rf
 NAME=libftprintf.a
 
 run: re
-	./testeur.sh
+	./test_output/testeur.sh
 	make fclean
 
 
