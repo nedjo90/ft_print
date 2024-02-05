@@ -1,0 +1,37 @@
+Category : %
+Category : s
+
+
+=====>1
+ 
+
+=====>2
+ 
+
+=====>2
+  
+
+=====>3
+
+
+
+=====>2
+
+  - 
+
+=====>6
+ -
+ 0
+ 
+ Je suis une chaine de caracteres tout a fait innocente !
+
+=====>66
+Je suis une chaine de caracteres tout a fait innocente !
+
+=====>57
+Je suis une chaine de caracteres tout a fait innocente ! Je suis une chaine de caracteres tout a fait innocente !
+
+=====>114
+
+
+=====>1

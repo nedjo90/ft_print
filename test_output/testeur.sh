@@ -26,11 +26,25 @@ gcc -w $destination_file -I ./includes -L . -lftprintf -o build.out
 ./standard.out > ./test_output/standard.txt
 ./build.out > ./test_output/build.txt
 
+echo "=============START PRINTF==========="
+
+bat ./test_output/standard.txt
+
+echo "=============END====================="
+
+echo ""
+
+echo "=============START FT_PRINTF========="
+
+bat ./test_output/build.txt
+
+echo "=============END====================="
+
 diff_result=$(delta ./test_output/standard.txt ./test_output/build.txt)
 
 # Vérifie si le résultat de la commande diff est vide
 if [ -z "$diff_result" ]; then
-    echo "Aucune différence!"
+	echo "$(tput setaf 1)Aucune différence!$(tput sgr0)"
 #    rm -rf $destination_file  ./test_output/build.txt ./test_output/standard.txt
 else
     # Affiche les différences seulement s'il y en a
