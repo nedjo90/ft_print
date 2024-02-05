@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:13:45 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/05 16:02:54 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/05 16:03:34 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@ int main(int argc, char** argv)
 {
 
 	int value;
-	ft_printf("Category : %%\n");
+
+
+
+
+	// ft_printf("Category : %%\n");
 
 	// value = ft_printf(" %% ");
 	// ft_printf("\n=====>%i\n", value);
@@ -34,6 +38,13 @@ int main(int argc, char** argv)
 	// ft_printf("\n=====>%i\n", value);
 
 	
+
+
+
+
+
+
+
 	// ft_printf("Category : c\n");
 
 	// value = ft_printf("%c\n", '0');
@@ -68,6 +79,13 @@ int main(int argc, char** argv)
 	// ft_printf("\n=====>%i\n", value);
 	// value = ft_printf("%c\n", '0' + 256);
 	// ft_printf("\n=====>%i\n", value);
+
+
+
+
+
+
+
 
 
 	ft_printf("Category : s\n");

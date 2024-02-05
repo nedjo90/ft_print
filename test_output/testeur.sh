@@ -28,7 +28,7 @@ gcc -w $destination_file -I ./includes -L . -lftprintf -o build.out
 
 echo "=============START PRINTF==========="
 
-bat ./test_output/standard.txt
+cat ./test_output/standard.txt
 
 echo "=============END====================="
 
@@ -36,11 +36,11 @@ echo ""
 
 echo "=============START FT_PRINTF========="
 
-bat ./test_output/build.txt
+cat ./test_output/build.txt
 
 echo "=============END====================="
 
-diff_result=$(delta ./test_output/standard.txt ./test_output/build.txt)
+diff_result=$(diff --color=always -u ./test_output/standard.txt ./test_output/build.txt)
 
 # Vérifie si le résultat de la commande diff est vide
 if [ -z "$diff_result" ]; then

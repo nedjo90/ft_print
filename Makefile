@@ -22,7 +22,7 @@ run: re
 
 only: re
 	gcc -w ./test_output/main_build.c -I ./includes -L . -lftprintf
-	./a.out | bat
+	./a.out | cat 
 
 all: $(NAME)
 
