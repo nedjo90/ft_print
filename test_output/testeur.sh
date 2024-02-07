@@ -1,4 +1,57 @@
+
 #!/bin/bash
+
+function win() {
+    
+
+echo "´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶¶¶¶¶¶"
+echo "´´´´´´´´´´´´´´´´´´´´¶¶´´´´´´´´´´¶¶"
+echo "´´´´´´¶¶¶¶¶´´´´´´´¶¶´´´´´´´´´´´´´´¶¶"
+echo "´´´´´¶´´´´´¶´´´´¶¶´´´´´¶¶´´´´¶¶´´´´´¶¶"
+echo "´´´´´¶´´´´´¶´´´¶¶´´´´´´¶¶´´´´¶¶´´´´´´´¶¶"
+echo "´´´´´¶´´´´¶´´¶¶´´´´´´´´¶¶´´´´¶¶´´´´´´´´¶¶"
+echo "´´´´´´¶´´´¶´´´¶´´´´´´´´´´´´´´´´´´´´´´´´´¶¶"
+echo "´´´´¶¶¶¶¶¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´´¶¶"
+echo "´´´¶´´´´´´´´´´´´¶´¶¶´´´´´´´´´´´´´¶¶´´´´´¶¶"
+echo "´´¶¶´´´´´´´´´´´´¶´´¶¶´´´´´´´´´´´´¶¶´´´´´¶¶"
+echo "´¶¶´´´¶¶¶¶¶¶¶¶¶¶¶´´´´¶¶´´´´´´´´¶¶´´´´´´´¶¶"
+echo "´¶´´´´´´´´´´´´´´´¶´´´´´¶¶¶¶¶¶¶´´´´´´´´´¶¶"
+echo "´¶¶´´´´´´´´´´´´´´¶´´´´´´´´´´´´´´´´´´´´¶¶"
+echo "´´¶´´´¶¶¶¶¶¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´´´´¶¶"
+echo "´´¶¶´´´´´´´´´´´¶´´¶¶´´´´´´´´´´´´´´´´¶¶"
+echo "´´´¶¶¶¶¶¶¶¶¶¶¶¶´´´´´¶¶´´´´´´´´´´´´¶¶"
+echo "´´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶¶¶¶¶¶¶¶"
+
+}
+
+
+function lose() {
+
+echo "+88"
+echo "+880"
+echo "+880"
+echo "+880"
+echo "+880"
+echo "+8880"
+echo "_++880"
+echo "_++888_____+++88"
+echo "_++8888__+++8880++88"
+echo "_+++8888+++8880++8888"
+echo "__++888++8888+++888888++8888"
+echo "__++88++8888++8888888++888888"
+echo "__++++++888888888888888888_+88"
+echo "___++++++88888888888888888_++8"
+echo "___++++++++000888888888888+88"
+echo "____+++++++000088888888888_88"
+echo "_____+++++++00088888888888"
+echo "_____+++++++088888888888"
+echo "______+++++++088888888888"
+echo "_______+++++++8888888888"
+echo "_______+++++++0088888888"
+echo "_______++++++0088888888"
+echo "_______++++++00888888"
+
+}
 
 # Nom du fichier source
 source_file="./test_output/main_standard.c"
@@ -40,15 +93,16 @@ cat ./test_output/build.txt
 
 echo "=============END====================="
 
-diff_result=$(diff --color=always -u ./test_output/standard.txt ./test_output/build.txt)
+diff_result=diff --color=always -u ./test_output/standard.txt ./test_output/build.txt
 
 # Vérifie si le résultat de la commande diff est vide
 if [ -z "$diff_result" ]; then
-	echo "$(tput setaf 1)Aucune différence!$(tput sgr0)"
+	win
 #    rm -rf $destination_file  ./test_output/build.txt ./test_output/standard.txt
 else
     # Affiche les différences seulement s'il y en a
     echo "$diff_result"
+    lose
 fi
 rm -rf build.out standard.out
 

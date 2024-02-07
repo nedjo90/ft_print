@@ -7,6 +7,9 @@ srcs/ft_print_conversion.c\
 srcs/ft_print_integer.c\
 srcs/ft_print_percent.c\
 srcs/ft_print_str.c\
+srcs/ft_print_pointer.c\
+srcs/ft_print_unsigned.c\
+srcs/ft_print_hexa.c\
 
 CC=gcc
 CFLAGS=-w
@@ -16,13 +19,20 @@ AR= ar rcs
 RM=rm -rf
 NAME=libftprintf.a
 
-run: re
-	./test_output/testeur.sh
-	make fclean
+#run: re
+#	norminette srcs/*.c
+#	norminette libft/*.c
+#	norminette includes/*
+#	./test_output/testeur.sh
+#	make fclean
 
-only: re
-	gcc -w ./test_output/main_build.c -I ./includes -L . -lftprintf
-	./a.out | cat 
+#stand: re
+#	gcc -w ./test_output/main_standard.c -I ./includes -L . -lftprintf
+#	./a.out | cat 
+
+#build: re
+#	gcc -w ./test_output/main_build.c -I ./includes -L . -lftprintf
+#	./a.out | cat 
 
 all: $(NAME)
 

@@ -6,15 +6,15 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 11:15:13 by nhan              #+#    #+#             */
-/*   Updated: 2023/12/08 13:48:10 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/07 01:07:49 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
+		return (-1);
+	return (write(fd, s, ft_strlen(s)));
 }

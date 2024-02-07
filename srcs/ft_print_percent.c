@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:33:57 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/05 15:34:17 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/07 00:32:48 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_print_percent(char c)
 {
-	ft_putchar_fd(c, 1);
-	return (1);
+	return (ft_putchar_fd(c, 1));
 }

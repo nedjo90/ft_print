@@ -4,6 +4,7 @@ ft_isalpha.c \
 ft_isascii.c \
 ft_isdigit.c \
 ft_isprint.c \
+ft_ulong_to_hex.c\
 ft_memcpy.c \
 ft_memmove.c \
 ft_memset.c \
@@ -32,6 +33,8 @@ ft_putchar_fd.c \
 ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
+ft_uint_to_str.c\
+ft_strrev.c\
 
 BONUS=ft_lstnew_bonus.c \
 ft_lstadd_front_bonus.c \

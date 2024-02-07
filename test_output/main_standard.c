@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:13:45 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/05 16:03:34 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/07 01:37:22 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ int main(int argc, char** argv)
 
 	int value;
 
-
-
+//\001\002\007\v\010\f\r\n
+	// value = printf("%s", 256);
+	// printf("\n");
+	// printf("%d\n", value);
 
 	// printf("Category : %%\n");
 
-	// value = printf(" %% ");
+	// value = printf(" %% |");
 	// printf("\n=====>%i\n", value);
 	// value = printf(" %%%% ");
 	// printf("\n=====>%i\n", value);
@@ -88,35 +90,46 @@ int main(int argc, char** argv)
 
 
 
-	printf("Category : s\n");
+	// printf("Category : s\n");
 
-	char *str = "Je suis une chaine de caracteres tout a fait innocente !";
+	// char *str = "Je suis une chaine de caracteres tout a fait innocente !";
 
-	value = printf("%s\n", "");
-	printf("\n=====>%i\n", value);
-	value = printf(" %s\n", "");
-	printf("\n=====>%i\n", value);
-	value = printf("%s \n", "");
-	printf("\n=====>%i\n", value);
-	value = printf(" %s \n", "");
-	printf("\n=====>%i\n", value);
-	value = printf("%s\n", "\n");
-	printf("\n=====>%i\n", value);
-	value = printf("%s %s\n", "\n", " - ");
-	printf("\n=====>%i\n", value);
-	value = printf(" %s %s %s %s\n", "-\n", "0\n", "\n", str);
-	printf("\n=====>%i\n", value);
-	value = printf("%s\n", str);
-	printf("\n=====>%i\n", value);
-	value = printf("%s %s\n", str, str);
-	printf("\n=====>%i\n", value);
-	value = printf("%s\n", NULL);
-	printf("\n=====>%i\n", value);
+	// value = printf("%s\n", "");
+	// printf("\n=====>%i\n", value);
+	// value = printf(" %s\n", "");
+	// printf("\n=====>%i\n", value);
+	// value = printf("%s \n", "");
+	// printf("\n=====>%i\n", value);
+	// value = printf(" %s \n", "");
+	// printf("\n=====>%i\n", value);
+	// value = printf("%s\n", "\n");
+	// printf("\n=====>%i\n", value);
+	// value = printf("%s %s\n", "\n", " - ");
+	// printf("\n=====>%i\n", value);
+	// value = printf(" %s %s %s %s\n", "-\n", "0\n", "\n", str);
+	// printf("\n=====>%i\n", value);
+	// value = printf("%s\n", str);
+	// printf("\n=====>%i\n", value);
+	// value = printf("%s %s\n", str, str);
+	// printf("\n=====>%i\n", value);
+	// value = printf("%s\n", NULL);
+	// printf("\n=====>%i\n", value);
+
+
+
+
+
+
+
+
+	
 
 
 	// printf("Category : p\n");
-	// printf("\n=====>%i\n", value);
 
+
+	value = printf("%p\n", NULL);
+	printf("\n=====>%i\n", value);
 	// value = printf("%p\n", -1);
 	// printf("\n=====>%i\n", value);
 	// value = printf("%p\n", 1);
@@ -133,8 +146,17 @@ int main(int argc, char** argv)
 	// printf("\n=====>%i\n", value);
 
 
+
+
+
+
+
+
+
+
+
+
 	// printf("Category : d\n");
-	// printf("\n=====>%i\n", value);
 
 	// value = printf(" %d \n", 0);
 	// printf("\n=====>%i\n", value);
@@ -197,7 +219,6 @@ int main(int argc, char** argv)
 
 
 	// printf("Category : i\n");
-	// printf("\n=====>%i\n", value);
 
 	// value = printf(" %i \n", 0);
 	// printf("\n=====>%i\n", value);
@@ -258,8 +279,18 @@ int main(int argc, char** argv)
 	// value = printf(" %i %i %i %i %i %i %i\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	// printf("\n=====>%i\n", value);
 
+
+
+
+
+
+
+
+
+
+	
+
 	// printf("Category : u\n");
-	// printf("\n=====>%i\n", value);
 
 	// value = printf(" %u \n", 0);
 	// printf("\n=====>%i\n", value);
@@ -322,7 +353,6 @@ int main(int argc, char** argv)
 
 
 	// printf("Category : x\n");
-	// printf("\n=====>%i\n", value);
 
 	// value = printf(" %x \n", 0);
 	// printf("\n=====>%i\n", value);
@@ -385,7 +415,6 @@ int main(int argc, char** argv)
 
 
 	// printf("Category : X\n");
-	// printf("\n=====>%i\n", value);
 
 	// value = printf(" %X \n", 0);
 	// printf("\n=====>%i\n", value);
