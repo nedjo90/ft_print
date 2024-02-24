@@ -12,7 +12,7 @@ srcs/ft_print_unsigned.c\
 srcs/ft_print_hexa.c\
 
 CC=gcc
-CFLAGS=-w
+CFLAGS=-Wall -Wextra -Werror
 OBJS=$(SRCS:.c=.o)
 CPPFLAGS= -I includes/
 AR= ar rcs
