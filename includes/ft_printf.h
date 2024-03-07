@@ -6,29 +6,25 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:29:57 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/07 01:57:54 by nhan             ###   ########.fr       */
+/*   Updated: 2024/03/07 13:22:47 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdarg.h>
 # include "../libft/libft.h"
+# include <stdarg.h>
 
-# ifdef _linux_
-
-#  define NULL_PTR "(null)"
-# else
+# define NULL_PTR "(nil)"
+# ifdef _APPLE_
 #  define NULL_PTR "0x0"
 # endif
 
 int	ft_printf(const char *fmt, ...);
-int	ft_conversion_symbol(char *haystack);
+int	ft_conversion_symbol(const char *haystack);
 int	ft_print_char(int c);
-int	ft_print_conversion(char *fmt, va_list *args);
+int	ft_print_conversion(const char *fmt, va_list args);
 int	ft_print_integer(int number);
 int	ft_print_percent(char c);
 int	ft_print_str(char *str);

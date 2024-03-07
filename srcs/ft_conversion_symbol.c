@@ -6,13 +6,13 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 15:37:13 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/05 15:37:32 by nhan             ###   ########.fr       */
+/*   Updated: 2024/02/24 11:07:33 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_conversion_symbol(char *haystack)
+int	ft_conversion_symbol(const char *haystack)
 {
 	if (!haystack || *haystack != '%')
 		return (0);

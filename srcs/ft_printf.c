@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:10:52 by nhan              #+#    #+#             */
-/*   Updated: 2024/02/07 02:12:15 by nhan             ###   ########.fr       */
+/*   Updated: 2024/03/02 16:05:31 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,11 @@ int	ft_printf(const char *fmt, ...)
 {
 	va_list		args;
 	int			len;
-	int			size;
 
 	if (!fmt)
 		return (-1);
 	va_start(args, fmt);
-	len = ft_print_parser(fmt, &args);
+	len = ft_print_parser(fmt, args);
 	va_end(args);
 	return (len);
 }
