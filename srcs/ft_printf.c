@@ -6,7 +6,7 @@
 /*   By: nhan <necat.han42@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 14:10:52 by nhan              #+#    #+#             */
-/*   Updated: 2024/03/02 16:05:31 by nhan             ###   ########.fr       */
+/*   Updated: 2024/03/07 14:50:08 by nhan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ static int	ft_print_parser(const char *fmt, va_list args)
 		if (ft_conversion_symbol(fmt))
 		{
 			fmt++;
+			while (*fmt == '-' || *fmt == '0' || *fmt == '.'\
+			|| *fmt == '#' || *fmt == ' ' || *fmt == '+')
+				fmt++;
 			size = ft_print_conversion(fmt++, args);
 		}
 		else

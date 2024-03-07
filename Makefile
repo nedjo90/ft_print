@@ -1,4 +1,3 @@
-.SILENT:
 SRCS=\
 srcs/ft_printf.c\
 srcs/ft_conversion_symbol.c\
@@ -18,21 +17,6 @@ CPPFLAGS= -I includes/
 AR= ar rcs
 RM=rm -rf
 NAME=libftprintf.a
-
-#run: re
-#	norminette srcs/*.c
-#	norminette libft/*.c
-#	norminette includes/*
-#	./test_output/testeur.sh
-#	make fclean
-
-#stand: re
-#	gcc -w ./test_output/main_standard.c -I ./includes -L . -lftprintf
-#	./a.out | cat 
-
-#build: re
-#	gcc -w ./test_output/main_build.c -I ./includes -L . -lftprintf
-#	./a.out | cat 
 
 all: $(NAME)
 
